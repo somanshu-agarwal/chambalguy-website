@@ -1,38 +1,137 @@
+/* GLOBAL STYLES - The 1BHK Aesthetic */
 body {
-  font-family: "Courier New", monospace;
-  background-color: #fefefe;
-  color: #111;
-  margin: 20px;
+  /* Font: Space Mono - The "Selective Thinker"  */
+  font-family: 'Space Mono', monospace;
+  /* Color: Laptop Carbon - The 9-5 Grind  */
+  background-color: #2B2B2B; 
+  color: #e0e0e0; /* Off-white for readability against dark mode */
+  margin: 40px auto;
+  max-width: 800px;
   line-height: 1.6;
+  padding: 0 20px;
 }
 
+/* HEADERS - The Industrial Stamp */
 header, footer {
   text-align: center;
 }
 
-h1 {
-  color: #0047ab;
-  text-shadow: 1px 1px #ddd;
+h1, h2, h3 {
+  /* Font: Bebas Neue - Bold and Unpretentious  */
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
+h1 {
+  /* Color: Gwalior Ochre - The Dust of the Fort  */
+  color: #B45F06; 
+  font-size: 3.5rem;
+  margin-bottom: 0.2em;
+  text-shadow: 2px 2px 0px #111;
+}
+
+h2 {
+  color: #a0a0a0;
+  border-bottom: 1px solid #B45F06; /* Ochre underline */
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+/* LINKS - Motivation & Freedom */
 a {
-  color: #0000ee;
-  text-decoration: underline;
+  /* Color: Incandescent Amber - Motivation  */
+  color: #FFBF00; 
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  color: #551a8b;
+  /* Color: Dusty Sky Blue - Freedom  */
+  color: #526D82; 
+  text-shadow: 0px 0px 8px rgba(82, 109, 130, 0.6);
 }
 
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+/* NAVIGATION */
+nav {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.separator {
+  color: #B45F06;
+  margin: 0 10px;
+}
+
+/* DIVIDER */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #B45F06, rgba(0, 0, 0, 0));
+  margin: 40px 0;
+}
+
+/* DISCOGRAPHY LIST */
 .release {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-left: 2px solid #ddd;
+  background-color: #333; /* Slightly lighter carbon */
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  /* Left Border: Gwalior Ochre  */
+  border-left: 4px solid #B45F06; 
+  box-shadow: 4px 4px 0px #111; /* Hard shadow for "Anti-Premium" look */
 }
 
+.release h3 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.tracklist {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Featured Release (Latest) */
+.featured {
+  border-left: 4px solid #FFBF00; /* Amber for the latest release */
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.quote {
+  font-style: italic;
+  color: #B45F06;
+  margin: 10px 0;
+}
+
+.email-link {
+  color: #e0e0e0;
+  border-bottom: 1px dotted #FFBF00;
+}
+
+/* MOBILE OPTIMIZATION */
 @media (max-width: 600px) {
   body {
-    margin: 10px;
-    font-size: 15px;
+    margin: 20px;
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2.8rem;
   }
 }
