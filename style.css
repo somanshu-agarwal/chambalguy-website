@@ -1,16 +1,15 @@
-/* --- CHAMBALGUY 2.0 BRAND IDENTITY --- */
+/* --- BRAND IDENTITY REFACTORED --- */
 
+/* Font Loading */
 @font-face {
     font-family: 'Editorial New';
     src: url('fonts/Regular.otf') format('opentype');
     font-weight: 400;
-    font-style: normal;
 }
 @font-face {
     font-family: 'Editorial New';
     src: url('fonts/Ultrabold.otf') format('opentype');
     font-weight: 800;
-    font-style: normal;
 }
 @font-face {
     font-family: 'Editorial New';
@@ -34,120 +33,131 @@ body {
     color: var(--ink);
     font-family: 'Editorial New', serif;
     line-height: 1.6;
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container { max-width: 650px; margin: 0 auto; }
 
-header { text-align: center; margin-bottom: 4rem; }
+/* Header */
+header { text-align: center; margin-bottom: 5rem; }
 
 .brand-name {
-    font-weight: 800;
-    font-size: 3.5rem;
+    font-family: 'Editorial New', serif;
+    font-weight: 800; /* Ultrabold */
+    font-size: clamp(2.5rem, 8vw, 4rem);
     color: var(--terracotta);
-    letter-spacing: -2px;
+    letter-spacing: -3px;
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
 .manifesto {
-    font-size: 1.25rem;
-    font-style: italic;
+    font-size: 1.4rem;
+    font-style: italic; /* Italic */
     color: var(--ink);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .grit-line {
     font-family: 'Space Mono', monospace;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: var(--sage);
 }
 
-nav { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: bold; margin-top: 2rem;}
-nav a { text-decoration: none; color: var(--ink); border-bottom: 1px solid transparent; transition: 0.3s;}
+/* Nav */
+nav { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: 700; margin-top: 2.5rem; }
+nav a { text-decoration: none; color: var(--ink); transition: 0.3s; padding-bottom: 2px; border-bottom: 1px solid transparent; }
 nav a:hover { color: var(--terracotta); border-bottom: 1px solid var(--terracotta); }
-.sep { color: var(--golden-hour); margin: 0 10px; }
+.sep { color: var(--golden-hour); margin: 0 12px; }
 
+/* Section Title */
 .section-title {
     font-family: 'Space Mono', monospace;
-    font-size: 0.9rem;
-    letter-spacing: 4px;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
     text-align: center;
     margin-bottom: 4rem;
     color: var(--golden-hour);
     text-transform: uppercase;
+    opacity: 0.8;
 }
 
+/* Discography */
 .release {
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
 }
 
-.release-link {
+.release h3 {
+    margin-bottom: 0.2rem;
+}
+
+.release h3 a {
     text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 0.3s ease;
+    color: var(--ink);
+    font-size: 2.2rem;
+    font-weight: 400; /* Regular */
+    transition: 0.3s ease;
+    display: inline-block;
 }
 
-.release-link h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    transition: color 0.3s ease;
+.release h3 a:hover {
+    color: var(--terracotta);
+    transform: skewX(-5deg); /* Subtle artistic tilt instead of a nudge */
 }
 
-.release-link:hover h3 {
+/* Featured Styling */
+.release.featured h3 a {
+    font-weight: 800; /* Ultrabold for Ufaan */
     color: var(--terracotta);
 }
 
-.release-link:hover {
-    transform: translateX(10px);
-}
-
-.release.featured .release-link h3 {
-    font-weight: 800;
-    color: var(--terracotta);
-}
-
+/* Metadata */
 .meta-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     border-bottom: 1px solid rgba(188, 108, 37, 0.2);
-    padding-bottom: 5px;
-    margin-top: 5px;
+    padding-bottom: 8px;
 }
 
+.date { color: var(--ink); opacity: 0.6; }
+
 .tag-latest {
-    background: var(--golden-hour);
-    color: white;
-    padding: 2px 8px;
-    font-weight: bold;
+    background: var(--terracotta);
+    color: var(--parchment);
+    padding: 3px 10px;
+    font-weight: 700;
+    font-size: 0.6rem;
 }
 
 .tracklist {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--sage);
-    margin-top: 10px;
-    font-style: italic;
+    margin-top: 12px;
+    font-style: italic; /* Italic */
 }
 
+/* Footer */
 footer {
-    margin-top: 8rem;
+    margin-top: 10rem;
     text-align: center;
     border-top: 1px solid rgba(188, 108, 37, 0.2);
     padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
-.footer-brand { font-family: 'Space Mono', monospace; font-weight: bold; color: var(--terracotta); letter-spacing: 2px; font-size: 0.7rem; }
-.footer-quote { font-style: italic; margin: 1.5rem 0; color: var(--sage); font-size: 1.1rem; }
-.email-cta { font-family: 'Space Mono', monospace; color: var(--ink); font-size: 0.8rem; text-decoration: underline; text-decoration-color: var(--golden-hour); }
-.copyright { margin-top: 2rem; opacity: 0.4; font-size: 0.65rem; font-family: 'Space Mono', monospace; }
+.footer-brand { font-family: 'Space Mono', monospace; font-weight: 700; color: var(--terracotta); letter-spacing: 3px; font-size: 0.75rem; }
+.footer-quote { font-style: italic; margin: 1.5rem 0; color: var(--sage); font-size: 1.2rem; }
+.email-cta { font-family: 'Space Mono', monospace; color: var(--ink); font-size: 0.85rem; text-decoration: none; border-bottom: 1px solid var(--golden-hour); padding-bottom: 2px; }
+.copyright { margin-top: 3rem; opacity: 0.3; font-size: 0.6rem; font-family: 'Space Mono', monospace; }
 
 @media (max-width: 600px) {
-    .brand-name { font-size: 2.5rem; }
-    .release h3 { font-size: 1.4rem; }
+    .brand-name { font-size: 2.8rem; letter-spacing: -1.5px; }
+    .release h3 a { font-size: 1.6rem; }
+    .manifesto { font-size: 1.1rem; }
 }
