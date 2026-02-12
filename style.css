@@ -1,137 +1,200 @@
-/* GLOBAL STYLES - The 1BHK Aesthetic */
+/* --- CHAMBALGUY 2.0 BRAND VARIABLES --- */
+:root {
+    --parchment: #FEFAE0;  /* The Canvas */
+    --ink: #1a1a18;        /* The Truth (Dark Charcoal, not Black) */
+    --terracotta: #BC6C25; /* Roots */
+    --sage: #606C38;       /* Growth */
+    --gold: #D4A373;       /* Shine */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  /* Font: Space Mono - The "Selective Thinker"  */
-  font-family: 'Space Mono', monospace;
-  /* Color: Laptop Carbon - The 9-5 Grind  */
-  background-color: #2B2B2B; 
-  color: #e0e0e0; /* Off-white for readability against dark mode */
-  margin: 40px auto;
-  max-width: 800px;
-  line-height: 1.6;
-  padding: 0 20px;
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-family: 'Space Mono', monospace; /* Default is the "Grind" font */
+    line-height: 1.6;
+    padding: 2rem 1rem;
 }
 
-/* HEADERS - The Industrial Stamp */
-header, footer {
-  text-align: center;
+.container {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-h1, h2, h3 {
-  /* Font: Bebas Neue - Bold and Unpretentious  */
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/* --- HEADER & TYPOGRAPHY --- */
+header {
+    text-align: center;
+    padding-bottom: 2rem;
 }
 
-h1 {
-  /* Color: Gwalior Ochre - The Dust of the Fort  */
-  color: #B45F06; 
-  font-size: 3.5rem;
-  margin-bottom: 0.2em;
-  text-shadow: 2px 2px 0px #111;
+.brand-name {
+    font-family: 'Playfair Display', serif; /* The "Editorial" font */
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--terracotta); /* Branding color applied to name */
+    margin-bottom: 1rem;
 }
 
-h2 {
-  color: #a0a0a0;
-  border-bottom: 1px solid #B45F06; /* Ochre underline */
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-top: 40px;
+.bio-block {
+    margin-bottom: 2rem;
 }
 
-/* LINKS - Motivation & Freedom */
-a {
-  /* Color: Incandescent Amber - Motivation  */
-  color: #FFBF00; 
-  text-decoration: none;
-  transition: all 0.3s ease;
+.manifesto {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--ink);
 }
 
-a:hover {
-  /* Color: Dusty Sky Blue - Freedom  */
-  color: #526D82; 
-  text-shadow: 0px 0px 8px rgba(82, 109, 130, 0.6);
+.roots {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--sage);
+    margin-top: 0.5rem;
 }
 
-.subtitle {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  margin-top: -10px;
-  margin-bottom: 30px;
-}
-
-/* NAVIGATION */
+/* --- NAVIGATION --- */
 nav {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
-  margin-top: 20px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--terracotta);
 }
 
 .separator {
-  color: #B45F06;
-  margin: 0 10px;
+    color: var(--gold);
+    margin: 0 10px;
 }
 
-/* DIVIDER */
-hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #B45F06, rgba(0, 0, 0, 0));
-  margin: 40px 0;
+/* --- DIVIDERS --- */
+.divider {
+    height: 1px;
+    background-color: var(--terracotta);
+    opacity: 0.3;
+    margin: 2rem 0;
 }
 
-/* DISCOGRAPHY LIST */
+/* --- DISCOGRAPHY --- */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .release {
-  background-color: #333; /* Slightly lighter carbon */
-  margin-bottom: 20px;
-  padding: 15px 20px;
-  /* Left Border: Gwalior Ochre  */
-  border-left: 4px solid #B45F06; 
-  box-shadow: 4px 4px 0px #111; /* Hard shadow for "Anti-Premium" look */
+    margin-bottom: 2.5rem;
+    border-left: 1px solid rgba(0,0,0,0.1); /* Subtle timeline look */
+    padding-left: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.release:hover {
+    border-left: 2px solid var(--sage);
 }
 
 .release h3 {
-  margin-top: 0;
-  color: #fff;
-  font-size: 1.8rem;
-  margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.meta {
+    font-size: 0.8rem;
+    color: #555;
+    text-transform: uppercase;
 }
 
 .tracklist {
-  font-size: 0.85rem;
-  color: #888;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    color: var(--sage);
 }
 
-/* Featured Release (Latest) */
-.featured {
-  border-left: 4px solid #FFBF00; /* Amber for the latest release */
+/* --- FEATURED ITEM (UFAAN) --- */
+.release.featured {
+    border: 1px solid var(--terracotta);
+    padding: 1.5rem;
+    background-color: rgba(188, 108, 37, 0.05); /* Very light terracotta tint */
+    position: relative;
 }
 
-/* FOOTER */
+.release.featured:hover {
+    border-left: 1px solid var(--terracotta); /* Reset hover effect */
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--terracotta);
+    color: var(--parchment);
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-left: 10px;
+    transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
 footer {
-  margin-top: 60px;
-  font-size: 0.85rem;
-  color: #777;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.footer-tagline {
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
 }
 
 .quote {
-  font-style: italic;
-  color: #B45F06;
-  margin: 10px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--sage);
+    margin-bottom: 2rem;
 }
 
-.email-link {
-  color: #e0e0e0;
-  border-bottom: 1px dotted #FFBF00;
+.contact-info a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
 }
 
-/* MOBILE OPTIMIZATION */
+.copyright {
+    margin-top: 2rem;
+    opacity: 0.5;
+    font-size: 0.7rem;
+}
+
+/* --- MOBILE TWEAKS --- */
 @media (max-width: 600px) {
-  body {
-    margin: 20px;
-    font-size: 14px;
-  }
-  h1 {
-    font-size: 2.8rem;
-  }
+    .brand-name {
+        font-size: 2.8rem;
+    }
+    .manifesto {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
 }
