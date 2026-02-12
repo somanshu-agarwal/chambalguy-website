@@ -1,200 +1,158 @@
-/* --- CHAMBALGUY 2.0 BRAND VARIABLES --- */
-:root {
-    --parchment: #FEFAE0;  /* The Canvas */
-    --ink: #1a1a18;        /* The Truth (Dark Charcoal, not Black) */
-    --terracotta: #BC6C25; /* Roots */
-    --sage: #606C38;       /* Growth */
-    --gold: #D4A373;       /* Shine */
+/* --- CHAMBALGUY 2.0 BRAND IDENTITY --- */
+
+/* 1. Custom Font Face - Pointing to your 'fonts' folder */
+@font-face {
+    font-family: 'Editorial New';
+    src: url('fonts/Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Editorial New';
+    src: url('fonts/Ultrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Editorial New';
+    src: url('fonts/Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* 2. Color Variables - As per Identity Table */
+:root {
+    --parchment: #FEFAE0;  /* The Canvas: Clarity */
+    --terracotta: #BC6C25; /* Roots: Grounding */
+    --sage: #606C38;       /* Freedom: Growth */
+    --golden-hour: #D4A373;/* Inspiration: The Shine */
+    --ink: #1a1a18;        /* The Truth */
 }
+
+/* 3. Global Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     background-color: var(--parchment);
     color: var(--ink);
-    font-family: 'Space Mono', monospace; /* Default is the "Grind" font */
+    font-family: 'Editorial New', serif;
     line-height: 1.6;
-    padding: 2rem 1rem;
+    padding: 4rem 1.5rem;
 }
 
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-}
+.container { max-width: 650px; margin: 0 auto; }
 
-/* --- HEADER & TYPOGRAPHY --- */
-header {
-    text-align: center;
-    padding-bottom: 2rem;
-}
+/* 4. Header Section */
+header { text-align: center; margin-bottom: 4rem; }
 
 .brand-name {
-    font-family: 'Playfair Display', serif; /* The "Editorial" font */
+    font-family: 'Editorial New', serif;
+    font-weight: 800; /* Uses Ultrabold.otf */
     font-size: 3.5rem;
-    font-weight: 600;
-    letter-spacing: -1px;
-    color: var(--terracotta); /* Branding color applied to name */
+    color: var(--terracotta);
+    letter-spacing: -2px;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
-.bio-block {
-    margin-bottom: 2rem;
-}
+.bio-block { margin-bottom: 2rem; }
 
 .manifesto {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-style: italic; /* Uses Italic.otf */
     color: var(--ink);
-}
-
-.roots {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--sage);
-    margin-top: 0.5rem;
-}
-
-/* --- NAVIGATION --- */
-nav {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--ink);
-    font-weight: 700;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--terracotta);
-}
-
-.separator {
-    color: var(--gold);
-    margin: 0 10px;
-}
-
-/* --- DIVIDERS --- */
-.divider {
-    height: 1px;
-    background-color: var(--terracotta);
-    opacity: 0.3;
-    margin: 2rem 0;
-}
-
-/* --- DISCOGRAPHY --- */
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.release {
-    margin-bottom: 2.5rem;
-    border-left: 1px solid rgba(0,0,0,0.1); /* Subtle timeline look */
-    padding-left: 1.5rem;
-    transition: transform 0.2s ease;
-}
-
-.release:hover {
-    border-left: 2px solid var(--sage);
-}
-
-.release h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 0.2rem;
-}
-
-.meta {
-    font-size: 0.8rem;
-    color: #555;
-    text-transform: uppercase;
-}
-
-.tracklist {
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    opacity: 0.8;
-    color: var(--sage);
-}
-
-/* --- FEATURED ITEM (UFAAN) --- */
-.release.featured {
-    border: 1px solid var(--terracotta);
-    padding: 1.5rem;
-    background-color: rgba(188, 108, 37, 0.05); /* Very light terracotta tint */
-    position: relative;
-}
-
-.release.featured:hover {
-    border-left: 1px solid var(--terracotta); /* Reset hover effect */
-}
-
-.tag {
-    display: inline-block;
-    background-color: var(--terracotta);
-    color: var(--parchment);
-    font-size: 0.6rem;
-    padding: 2px 6px;
-    border-radius: 2px;
-    vertical-align: middle;
-    margin-left: 10px;
-    transform: translateY(-2px);
-}
-
-/* --- FOOTER --- */
-footer {
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 0.8rem;
-}
-
-.footer-tagline {
-    font-weight: bold;
-    letter-spacing: 1px;
     margin-bottom: 0.5rem;
 }
 
-.quote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+.grit-line {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: var(--sage);
-    margin-bottom: 2rem;
 }
 
-.contact-info a {
+/* 5. Navigation */
+nav { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: bold; }
+nav a { text-decoration: none; color: var(--ink); transition: 0.3s; }
+nav a:hover { color: var(--terracotta); }
+.sep { color: var(--golden-hour); margin: 0 10px; }
+
+/* 6. Discography Section */
+.section-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--golden-hour);
+    text-transform: uppercase;
+}
+
+.release {
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.release h3 a {
+    text-decoration: none;
     color: var(--ink);
-    text-decoration: underline;
-    text-decoration-color: var(--gold);
+    font-size: 1.8rem;
+    font-weight: 400; /* Uses Regular.otf */
+    transition: 0.3s ease;
 }
 
-.copyright {
-    margin-top: 2rem;
-    opacity: 0.5;
+.release h3 a:hover {
+    color: var(--terracotta);
+    padding-left: 8px;
+}
+
+/* Special styling for Latest Album */
+.release.featured h3 a {
+    font-weight: 800; 
+    color: var(--terracotta);
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
     font-size: 0.7rem;
+    border-bottom: 1px solid rgba(188, 108, 37, 0.15);
+    padding-bottom: 5px;
+    margin-top: 5px;
 }
 
-/* --- MOBILE TWEAKS --- */
+.tag-latest {
+    background: var(--golden-hour);
+    color: white;
+    padding: 2px 8px;
+    font-weight: bold;
+}
+
+.tracklist {
+    font-size: 0.8rem;
+    color: var(--sage);
+    margin-top: 10px;
+    font-style: italic; /* Uses Italic.otf */
+}
+
+/* 7. Footer */
+footer {
+    margin-top: 8rem;
+    text-align: center;
+    border-top: 1px solid rgba(188, 108, 37, 0.2);
+    padding-top: 4rem;
+}
+
+.footer-brand { font-family: 'Space Mono', monospace; font-weight: bold; color: var(--terracotta); letter-spacing: 2px; font-size: 0.7rem; }
+.footer-quote { font-style: italic; margin: 1.5rem 0; color: var(--sage); font-size: 1.1rem; }
+footer a { font-family: 'Space Mono', monospace; color: var(--ink); font-size: 0.8rem; text-decoration: underline; text-decoration-color: var(--golden-hour); }
+.copyright { margin-top: 2rem; opacity: 0.4; font-size: 0.65rem; font-family: 'Space Mono', monospace; }
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
-    .brand-name {
-        font-size: 2.8rem;
-    }
-    .manifesto {
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
+    .brand-name { font-size: 2.5rem; }
+    .release h3 a { font-size: 1.4rem; }
 }
