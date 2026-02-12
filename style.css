@@ -1,6 +1,5 @@
 /* --- CHAMBALGUY 2.0 BRAND IDENTITY --- */
 
-/* 1. Custom Font Face - Pointing to your 'fonts' folder */
 @font-face {
     font-family: 'Editorial New';
     src: url('fonts/Regular.otf') format('opentype');
@@ -20,16 +19,14 @@
     font-style: italic;
 }
 
-/* 2. Color Variables - As per Identity Table */
 :root {
-    --parchment: #FEFAE0;  /* The Canvas: Clarity */
-    --terracotta: #BC6C25; /* Roots: Grounding */
-    --sage: #606C38;       /* Freedom: Growth */
-    --golden-hour: #D4A373;/* Inspiration: The Shine */
-    --ink: #1a1a18;        /* The Truth */
+    --parchment: #FEFAE0;
+    --terracotta: #BC6C25;
+    --sage: #606C38;
+    --golden-hour: #D4A373;
+    --ink: #1a1a18;
 }
 
-/* 3. Global Styles */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -42,12 +39,10 @@ body {
 
 .container { max-width: 650px; margin: 0 auto; }
 
-/* 4. Header Section */
 header { text-align: center; margin-bottom: 4rem; }
 
 .brand-name {
-    font-family: 'Editorial New', serif;
-    font-weight: 800; /* Uses Ultrabold.otf */
+    font-weight: 800;
     font-size: 3.5rem;
     color: var(--terracotta);
     letter-spacing: -2px;
@@ -55,11 +50,9 @@ header { text-align: center; margin-bottom: 4rem; }
     text-transform: uppercase;
 }
 
-.bio-block { margin-bottom: 2rem; }
-
 .manifesto {
     font-size: 1.25rem;
-    font-style: italic; /* Uses Italic.otf */
+    font-style: italic;
     color: var(--ink);
     margin-bottom: 0.5rem;
 }
@@ -72,13 +65,11 @@ header { text-align: center; margin-bottom: 4rem; }
     color: var(--sage);
 }
 
-/* 5. Navigation */
-nav { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: bold; }
-nav a { text-decoration: none; color: var(--ink); transition: 0.3s; }
-nav a:hover { color: var(--terracotta); }
+nav { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: bold; margin-top: 2rem;}
+nav a { text-decoration: none; color: var(--ink); border-bottom: 1px solid transparent; transition: 0.3s;}
+nav a:hover { color: var(--terracotta); border-bottom: 1px solid var(--terracotta); }
 .sep { color: var(--golden-hour); margin: 0 10px; }
 
-/* 6. Discography Section */
 .section-title {
     font-family: 'Space Mono', monospace;
     font-size: 0.9rem;
@@ -91,25 +82,31 @@ nav a:hover { color: var(--terracotta); }
 
 .release {
     margin-bottom: 3.5rem;
-    position: relative;
 }
 
-.release h3 a {
+.release-link {
     text-decoration: none;
-    color: var(--ink);
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.release-link h3 {
     font-size: 1.8rem;
-    font-weight: 400; /* Uses Regular.otf */
-    transition: 0.3s ease;
+    font-weight: 400;
+    transition: color 0.3s ease;
 }
 
-.release h3 a:hover {
+.release-link:hover h3 {
     color: var(--terracotta);
-    padding-left: 8px;
 }
 
-/* Special styling for Latest Album */
-.release.featured h3 a {
-    font-weight: 800; 
+.release-link:hover {
+    transform: translateX(10px);
+}
+
+.release.featured .release-link h3 {
+    font-weight: 800;
     color: var(--terracotta);
 }
 
@@ -119,7 +116,7 @@ nav a:hover { color: var(--terracotta); }
     align-items: center;
     font-family: 'Space Mono', monospace;
     font-size: 0.7rem;
-    border-bottom: 1px solid rgba(188, 108, 37, 0.15);
+    border-bottom: 1px solid rgba(188, 108, 37, 0.2);
     padding-bottom: 5px;
     margin-top: 5px;
 }
@@ -135,10 +132,9 @@ nav a:hover { color: var(--terracotta); }
     font-size: 0.8rem;
     color: var(--sage);
     margin-top: 10px;
-    font-style: italic; /* Uses Italic.otf */
+    font-style: italic;
 }
 
-/* 7. Footer */
 footer {
     margin-top: 8rem;
     text-align: center;
@@ -148,11 +144,10 @@ footer {
 
 .footer-brand { font-family: 'Space Mono', monospace; font-weight: bold; color: var(--terracotta); letter-spacing: 2px; font-size: 0.7rem; }
 .footer-quote { font-style: italic; margin: 1.5rem 0; color: var(--sage); font-size: 1.1rem; }
-footer a { font-family: 'Space Mono', monospace; color: var(--ink); font-size: 0.8rem; text-decoration: underline; text-decoration-color: var(--golden-hour); }
+.email-cta { font-family: 'Space Mono', monospace; color: var(--ink); font-size: 0.8rem; text-decoration: underline; text-decoration-color: var(--golden-hour); }
 .copyright { margin-top: 2rem; opacity: 0.4; font-size: 0.65rem; font-family: 'Space Mono', monospace; }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
     .brand-name { font-size: 2.5rem; }
-    .release h3 a { font-size: 1.4rem; }
+    .release h3 { font-size: 1.4rem; }
 }
