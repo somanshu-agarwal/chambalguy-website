@@ -193,3 +193,12 @@ footer {
 .bio-cta a:hover {
     color: var(--golden-hour);
 }
+
+/* Release Description */
+.release-desc {
+    font-size: 0.95rem;
+    color: var(--sage);
+    margin-top: 12px;
+    font-style: italic;
+    line-height: 1.6;
+}
