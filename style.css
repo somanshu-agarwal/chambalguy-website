@@ -161,3 +161,35 @@ footer {
     .release h3 a { font-size: 1.6rem; }
     .manifesto { font-size: 1.1rem; }
 }
+
+/* Bio Section */
+.bio-section {
+    margin-bottom: 6rem;
+    border-top: 1px solid rgba(188, 108, 37, 0.2);
+    padding-top: 4rem;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.bio-text:first-child {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--terracotta);
+}
+
+.bio-cta a {
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--golden-hour);
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+.bio-cta a:hover {
+    color: var(--golden-hour);
+}
