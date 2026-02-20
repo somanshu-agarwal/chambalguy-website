@@ -202,3 +202,71 @@ footer {
     font-style: italic;
     line-height: 1.6;
 }
+
+/* Press Section */
+.press-section {
+    margin-bottom: 6rem;
+    border-top: 1px solid rgba(188, 108, 37, 0.2);
+    padding-top: 4rem;
+    text-align: center;
+}
+
+.press-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2.5rem;
+}
+
+.press-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.7;
+}
+
+.press-sep {
+    color: var(--golden-hour);
+    margin: 0 8px;
+    font-family: 'Space Mono', monospace;
+}
+
+.press-quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.press-quote {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.press-quote cite {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    font-style: normal;
+    color: var(--golden-hour);
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .press-logos {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .press-sep {
+        display: none;
+    }
+}
