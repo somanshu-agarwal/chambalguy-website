@@ -276,4 +276,36 @@ footer {
     .press-sep {
         display: none;
     }
+
+/* Automatic Night Mode (6 PM - 6 AM IST) */
+html.dark-mode body {
+  background-color: #141413;
+  color: #EDEAE2;
 }
+
+html.dark-mode a {
+  color: #DDA15E;
+}
+
+html.dark-mode .brand-name,
+html.dark-mode .section-title,
+html.dark-mode .release h3 a {
+  color: #F4F1EA;
+}
+
+html.dark-mode .grit-line,
+html.dark-mode .date,
+html.dark-mode .tracklist {
+  color: #A3B18A;
+}
+
+html.dark-mode .press-quote {
+  border-left-color: #BC6C25;
+  color: #D8D4CC;
+}
+
+html.dark-mode footer {
+  border-top-color: rgba(237, 234, 226, 0.15);
+}
+}
+
