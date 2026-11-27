@@ -76,6 +76,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Dark Mode --> 
+  <script>
+    (function() {
+      const istHour = Number(
+        new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Asia/Kolkata',
+          hour: 'numeric',
+          hour12: false
+        }).format(new Date())
+      );
+      // Dark mode from 6:30 PM (18) to 6:30 AM (6) IST
+      if (istHour >= 18 || istHour < 6) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
   
   <!-- Google tag (gtag.js) -->
