@@ -26,6 +26,14 @@
     --ink: #1a1a18;
 }
 
+html.dark-mode {
+    --parchment: #141413;
+    --terracotta: #DDA15E;
+    --sage: #A3B18A;
+    --golden-hour: #BC6C25;
+    --ink: #EDEAE2;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -276,36 +284,35 @@ footer {
     .press-sep {
         display: none;
     }
+}
 
 /* Automatic Night Mode (6 PM - 6 AM IST) */
 html.dark-mode body {
-  background-color: #141413;
-  color: #EDEAE2;
+    background-color: var(--parchment);
+    color: var(--ink);
 }
 
 html.dark-mode a {
-  color: #DDA15E;
+    color: var(--terracotta);
 }
 
 html.dark-mode .brand-name,
 html.dark-mode .section-title,
 html.dark-mode .release h3 a {
-  color: #F4F1EA;
+    color: var(--ink);
 }
 
 html.dark-mode .grit-line,
 html.dark-mode .date,
 html.dark-mode .tracklist {
-  color: #A3B18A;
+    color: var(--sage);
 }
 
 html.dark-mode .press-quote {
-  border-left-color: #BC6C25;
-  color: #D8D4CC;
+    border-left-color: var(--terracotta);
+    color: var(--ink);
 }
 
 html.dark-mode footer {
-  border-top-color: rgba(237, 234, 226, 0.15);
+    border-top-color: rgba(237, 234, 226, 0.15);
 }
-}
-
